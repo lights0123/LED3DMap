@@ -36,8 +36,17 @@
 			</ul>
 			<h2 class="text-3xl font-semibold">Example</h2>
 			I captured videos from a tree outside my house and got this very accurate 3D view:
-			<video muted autoplay loop width="760" height="1012" class="max-h-screen w-96">
+			<video
+				muted
+				playsinline
+				autoplay
+				loop
+				width="760"
+				height="1012"
+				class="max-h-screen max-w-screen w-96"
+			>
 				<source src="@/assets/demo.webm" />
+				<source src="@/assets/demo.mp4" />
 			</video>
 		</div>
 		<div ref="header" class="min-h-screen container mx-auto p-4">
