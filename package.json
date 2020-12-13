@@ -1,0 +1,66 @@
+{
+  "name": "led-map",
+  "description": "A tool to automatically create 3D mappings of lights from two videos",
+  "license": "AGPL-3.0-only",
+  "repository": "https://github.com/lights0123/LED3DMap",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "nuxt-ts -m",
+    "build": "nuxt-ts build -m",
+    "start": "nuxt-ts start -m",
+    "generate": "nuxt-ts generate -m",
+    "prepare": "cd rs/led-map-wasm && wasm-pack build",
+    "lint:js": "eslint --ext .js,.vue --ignore-path .gitignore .",
+    "lint": "yarn lint:js"
+  },
+  "lint-staged": {
+    "*.{js,vue}": "eslint"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "dependencies": {
+    "@nuxt/typescript-runtime": "^2.0.0",
+    "core-js": "^3.6.5",
+    "feather-icons": "^4.28.0",
+    "file-saver": "^2.0.5",
+    "nuxt": "^2.14.6",
+    "nuxt-property-decorator": "^2.8.8",
+    "resize-observer-polyfill": "^1.5.1",
+    "three": "^0.123.0"
+  },
+  "devDependencies": {
+    "@nuxt/types": "^2.14.6",
+    "@nuxt/typescript-build": "^2.0.3",
+    "@nuxtjs/eslint-config": "^3.1.0",
+    "@nuxtjs/eslint-config-typescript": "^3.0.0",
+    "@nuxtjs/eslint-module": "^2.0.0",
+    "@nuxtjs/tailwindcss": "^3.1.0",
+    "@types/file-saver": "^2.0.1",
+    "autoprefixer": "^9",
+    "babel-eslint": "^10.1.0",
+    "eslint": "^7.10.0",
+    "eslint-config-prettier": "^6.12.0",
+    "eslint-plugin-nuxt": "^1.0.0",
+    "eslint-plugin-prettier": "^3.1.4",
+    "husky": "^4.3.0",
+    "lint-staged": "^10.4.0",
+    "postcss": "^7",
+    "prettier": "^2.1.2",
+    "tailwindcss": "npm:@tailwindcss/postcss7-compat",
+    "vue-svg-loader": "^0.16.0",
+    "worker-loader": "^3.0.6"
+  },
+  "prettier": {
+    "trailingComma": "es5",
+    "tabWidth": 4,
+    "useTabs": true,
+    "semi": true,
+    "singleQuote": true,
+    "printWidth": 100,
+    "proseWrap": "never"
+  }
+}
