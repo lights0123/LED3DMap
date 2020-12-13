@@ -10,7 +10,6 @@
     "build": "nuxt-ts build -m",
     "start": "nuxt-ts start -m",
     "generate": "nuxt-ts generate -m",
-    "prepare": "cd rs/led-map-wasm && wasm-pack build",
     "lint:js": "eslint --ext .js,.vue --ignore-path .gitignore .",
     "lint": "yarn lint:js"
   },

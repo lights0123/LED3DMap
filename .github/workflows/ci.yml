@@ -38,6 +38,8 @@ jobs:
             ${{ runner.os }}-cargo-
       - name: Install wasm-pack
         run: curl https://rustwasm.github.io/wasm-pack/installer/init.sh -sSf | sh
+      - name: Compile Rust
+        run: cd rs/led-map-wasm && wasm-pack build
       - name: install app dependencies
         run: yarn
       - name: Build
